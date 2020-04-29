@@ -1,0 +1,44 @@
+<div class="auth">
+  <div class="auth__top">
+    <p>forest chat</p>
+  </div>
+  <div class="auth__bottom">
+    <div class="auth__bottom__title">
+      <div class="auth__bottom__title__body mat-body-2">Welcome Back!</div>
+      <div class="auth__bottom__title__caption mat-caption">
+        Please enter your name and phone number
+      </div>
+    </div>
+    <form class="auth__bottom__form">
+      <mat-form-field class="auth__bottom__form__field">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Please enter your name" />
+        <mat-icon matSuffix color="primary">person</mat-icon>
+      </mat-form-field>
+      <mat-form-field class="auth__bottom__form__field">
+        <mat-label>Phone Number</mat-label>
+        <span matPrefix>+62 &nbsp;</span>
+        <input type="tel" matInput placeholder="Please enter your number" />
+        <mat-icon matSuffix color="primary">phone</mat-icon>
+      </mat-form-field>
+      <div class="auth__bottom__form__btn">
+        <button
+          class="auth__bottom__form__btn__item"
+          mat-raised-button
+          color="primary"
+        >
+          sign in
+        </button>
+        <div class="auth__bottom__form__btn__signup">
+          <p>Don't have account?<button mat-button>Sign up here</button></p>
+        </div>
+      </div>
+    </form>
+    <div class="auth__bottom__decoration1">
+      <img src="../../assets/decoration/tree1.png" alt="ForestChat" />
+    </div>
+    <div class="auth__bottom__decoration2">
+      <img src="../../assets/decoration/tree2.png" alt="ForestChat" />
+    </div>
+  </div>
+</div>
