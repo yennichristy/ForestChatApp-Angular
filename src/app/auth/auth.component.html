@@ -4,21 +4,46 @@
   </div>
   <div class="auth__bottom">
     <div class="auth__bottom__title">
-      <div class="auth__bottom__title__body mat-body-2">Welcome Back!</div>
+      <div class="auth__bottom__title__body mat-body-2">
+        {{ signinPage ? "Welcome back!" : "Connect with Forest Chat!" }}
+      </div>
       <div class="auth__bottom__title__caption mat-caption">
-        Please enter your name and phone number
+        {{
+          signinPage
+            ? "Please enter your name and phone number"
+            : "Please sign up here"
+        }}
       </div>
     </div>
-    <form class="auth__bottom__form">
+    <form
+      class="auth__bottom__form"
+      #signinForm="ngForm"
+      (ngSubmit)="onSubmit(signinForm)"
+      *ngIf="signinPage"
+    >
       <mat-form-field class="auth__bottom__form__field">
         <mat-label>Name</mat-label>
-        <input matInput placeholder="Please enter your name" />
+        <input
+          type="text"
+          matInput
+          placeholder="Please enter your name"
+          ngModel
+          name="name"
+          required
+        />
         <mat-icon matSuffix color="primary">person</mat-icon>
       </mat-form-field>
       <mat-form-field class="auth__bottom__form__field">
         <mat-label>Phone Number</mat-label>
         <span matPrefix>+62 &nbsp;</span>
-        <input type="tel" matInput placeholder="Please enter your number" />
+        <input
+          type="tel"
+          matInput
+          placeholder="Please enter your number"
+          ngModel
+          name="number"
+          required
+        />
         <mat-icon matSuffix color="primary">phone</mat-icon>
       </mat-form-field>
       <div class="auth__bottom__form__btn">
@@ -26,11 +51,82 @@
           class="auth__bottom__form__btn__item"
           mat-raised-button
           color="primary"
+          type="submit"
+          [disabled]="!signinForm.valid"
         >
-          sign in
+          {{ signinPage ? "sign in" : "sign up" }}
         </button>
         <div class="auth__bottom__form__btn__signup">
-          <p>Don't have account?<button mat-button>Sign up here</button></p>
+          <p>
+            {{ signinPage ? "Don't have account?" : "Already have account?"
+            }}<button mat-button type="button" (click)="onSwitch()">
+              {{ signinPage ? "Sign up here" : "Sign in here" }}
+            </button>
+          </p>
+        </div>
+      </div>
+    </form>
+    <form
+      class="auth__bottom__form"
+      #signupForm="ngForm"
+      (ngSubmit)="onSubmit(signupForm)"
+      *ngIf="!signinPage"
+    >
+      <mat-form-field class="auth__bottom__form__field">
+        <mat-label>Email</mat-label>
+        <input
+          type="email"
+          matInput
+          placeholder="Please enter your email"
+          ngModel
+          name="email"
+          email
+          required
+        />
+        <mat-icon matSuffix color="primary">email</mat-icon>
+      </mat-form-field>
+      <mat-form-field class="auth__bottom__form__field">
+        <mat-label>Name</mat-label>
+        <input
+          type="text"
+          matInput
+          placeholder="Please enter your name"
+          ngModel
+          name="name"
+          required
+        />
+        <mat-icon matSuffix color="primary">person</mat-icon>
+      </mat-form-field>
+      <mat-form-field class="auth__bottom__form__field">
+        <mat-label>Phone Number</mat-label>
+        <span matPrefix>+62 &nbsp;</span>
+        <input
+          type="tel"
+          matInput
+          placeholder="Please enter your number"
+          ngModel
+          name="number"
+          required
+        />
+        <mat-icon matSuffix color="primary">phone</mat-icon>
+      </mat-form-field>
+      <div class="auth__bottom__form__btn">
+        <button
+          class="auth__bottom__form__btn__item"
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="!signupForm.valid"
+        >
+          {{ signinPage ? "sign in" : "sign up" }}
+        </button>
+        <div class="auth__bottom__form__btn__signup">
+          <p>
+            {{ signinPage ? "Don't have account?" : "Already have account?"
+            }}<button mat-button type="button" (click)="onSwitch()">
+              {{ signinPage ? "Sign up here" : "Sign in here" }}
+            </button>
+          </p>
         </div>
       </div>
     </form>

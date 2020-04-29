@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: repeat(13, 1fr);
     &__title {
-      grid-column: 5/10;
+      grid-column: 4/11;
       text-align: center;
       padding-top: 80px;
       &__body {
