@@ -23,30 +23,9 @@
         &__more {
           grid-column: 7/8;
           padding-top: 15px;
-          mat-icon {
+          .material-icons {
             font-size: 30px;
             color: #454545;
-          }
-        }
-      }
-      &__search-box {
-        background-color: #d1d1d1;
-        padding: 10px 10px;
-        &__search {
-          background-color: white;
-          border-radius: 5px;
-          padding: 5px 5px;
-          display: flex;
-          &__icon {
-            padding-top: 4px;
-            color: #ababab;
-          }
-          &__input {
-            border: none;
-            font-family: BenchNine;
-            font-size: 25px;
-            margin-left: 5px;
-            outline: none;
           }
         }
       }
