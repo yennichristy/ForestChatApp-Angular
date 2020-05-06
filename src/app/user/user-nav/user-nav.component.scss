@@ -1,0 +1,55 @@
+.chat {
+  &__container {
+    background-color: white;
+    &__left {
+      font-family: BenchNine;
+      &__user {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        background-color: #d1d1d1;
+        padding: 10px 10px;
+        &__profile {
+          grid-column: 1/2;
+          height: 60px;
+        }
+        &__name {
+          grid-column: 2/7;
+          font-size: 30px;
+          padding: 0px 15px;
+          padding-top: 25px;
+          max-width: 400px;
+          color: #454545;
+        }
+        &__more {
+          grid-column: 7/8;
+          padding-top: 15px;
+          mat-icon {
+            font-size: 30px;
+            color: #454545;
+          }
+        }
+      }
+      &__search-box {
+        background-color: #d1d1d1;
+        padding: 10px 10px;
+        &__search {
+          background-color: white;
+          border-radius: 5px;
+          padding: 5px 5px;
+          display: flex;
+          &__icon {
+            padding-top: 4px;
+            color: #ababab;
+          }
+          &__input {
+            border: none;
+            font-family: BenchNine;
+            font-size: 25px;
+            margin-left: 5px;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}

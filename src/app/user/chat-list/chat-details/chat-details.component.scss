@@ -1,0 +1,40 @@
+.chat-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  &__content {
+    grid-column: 1/6;
+    background-color: whitesmoke;
+    display: flex;
+    max-height: 80px;
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      padding: 5px 5px;
+      &__picture {
+        grid-column: 1/2;
+        padding: 3px 3px;
+        img {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+        }
+      }
+      &__name {
+        grid-column: 2/6;
+        margin-left: 15px;
+        margin-top: 5px;
+        h3 {
+          font-family: BenchNine;
+          color: #454545;
+          font-size: 28px;
+          margin-bottom: 10px;
+        }
+        p {
+          font-family: BenchNine;
+          font-size: 18px;
+          color: #ababab;
+        }
+      }
+    }
+  }
+}

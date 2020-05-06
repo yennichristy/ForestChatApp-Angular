@@ -1,0 +1,30 @@
+.app {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  &__background {
+    background: #009688;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    height: 80%;
+    width: 60%;
+    background: white;
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1),
+      0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    app-user-nav {
+      grid-column: 1/5;
+    }
+    app-chat-list {
+      grid-column: 1/5;
+    }
+    app-chat-message {
+      grid-column: 5/14;
+    }
+  }
+}

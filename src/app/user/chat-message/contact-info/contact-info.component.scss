@@ -1,0 +1,38 @@
+.contact-info {
+  background: #d1d1d1;
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    padding: 10px 10px;
+    &__picture {
+      width: 85%;
+      grid-column: 1/3;
+      img {
+        width: 100%;
+        height: 60px;
+        border-radius: 50%;
+      }
+    }
+    &__text {
+      grid-column: 3/14;
+      color: #242424;
+      h3 {
+        padding: 10px 10px 5px;
+        font-size: 28px;
+        font-family: BenchNine;
+        margin-bottom: 0;
+      }
+      p {
+        margin-bottom: 0;
+        padding-left: 10px;
+        color: #454545;
+      }
+    }
+    .material-icons {
+      grid-column: 15/16;
+      font-size: 30px;
+      color: #454545;
+      padding-top: 15px;
+    }
+  }
+}
