@@ -22,18 +22,6 @@
       *ngIf="signinPage"
     >
       <mat-form-field class="auth__bottom__form__field">
-        <mat-label>Name</mat-label>
-        <input
-          type="text"
-          matInput
-          placeholder="Please enter your name"
-          ngModel
-          name="name"
-          required
-        />
-        <mat-icon matSuffix color="primary">person</mat-icon>
-      </mat-form-field>
-      <mat-form-field class="auth__bottom__form__field">
         <mat-label>Phone Number</mat-label>
         <span matPrefix>+62 &nbsp;</span>
         <input
@@ -72,19 +60,6 @@
       (ngSubmit)="onSubmit(signupForm)"
       *ngIf="!signinPage"
     >
-      <mat-form-field class="auth__bottom__form__field">
-        <mat-label>Email</mat-label>
-        <input
-          type="email"
-          matInput
-          placeholder="Please enter your email"
-          ngModel
-          name="email"
-          email
-          required
-        />
-        <mat-icon matSuffix color="primary">email</mat-icon>
-      </mat-form-field>
       <mat-form-field class="auth__bottom__form__field">
         <mat-label>Name</mat-label>
         <input
