@@ -1,6 +1,22 @@
+<div class="search-box">
+  <div class="search-box__search">
+    <div class="search-box__search__icon">
+      <span class="material-icons">search</span>
+    </div>
+    <input
+      class="search-box__search__input"
+      type="text"
+      matInput
+      placeholder="Search contact"
+      [(ngModel)]="name"
+      (input)="search()"
+    />
+  </div>
+</div>
 <div class="chat-list">
   <app-chat-details
-    *ngFor="let chatList of chat"
+    *ngFor="let chatList of chat; let i = index"
     [chat]="chatList"
+    [index]="i"
   ></app-chat-details>
 </div>
