@@ -1,3 +1,6 @@
+a {
+  text-decoration: none;
+}
 .chat-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -28,6 +31,7 @@
           color: #454545;
           font-size: 28px;
           margin-bottom: 10px;
+          text-decoration: none;
         }
         p {
           font-family: BenchNine;

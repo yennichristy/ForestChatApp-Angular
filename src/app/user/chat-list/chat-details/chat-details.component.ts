@@ -9,6 +9,7 @@ import { ChatService } from '../../chat.service';
 })
 export class ChatDetailsComponent implements OnInit {
   @Input() chat: ChatList;
+  @Input() index: number;
 
   constructor() {}
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatList } from '../../../models/contact.model';
 import { ChatService } from '../../chat.service';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-info',
@@ -12,7 +12,15 @@ export class ContactInfoComponent implements OnInit {
   chat: ChatList;
   id: number;
 
-  constructor() {}
+  constructor(
+    private chatService: ChatService,
+    private route: ActivatedRoute
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+      this.id = +params['id'];
+      this.chat = this.chatService.getChat(this.id);
+    });
+  }
 }
