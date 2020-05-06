@@ -65,5 +65,9 @@ export class ChatService {
     return this.chatList.slice();
   }
 
+  getChat(index: number) {
+    return this.chatList[index];
+  }
+
   constructor() {}
 }
