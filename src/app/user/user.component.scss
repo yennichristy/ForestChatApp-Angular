@@ -23,8 +23,9 @@
     app-chat-list {
       grid-column: 1/5;
     }
-    app-chat-message {
+    router-outlet {
       grid-column: 5/14;
+      position: absolute;
     }
   }
 }
