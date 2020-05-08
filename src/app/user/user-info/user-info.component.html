@@ -1,0 +1,41 @@
+<div mat-dialog-content class="dialog">
+  <div class="dialog__top">
+    <div class="dialog__top__head">
+      <div class="dialog__top__head__text">
+        <p>Profile</p>
+      </div>
+      <div class="dialog__top__head__btn">
+        <button mat-icon-button>
+          <span class="material-icons">cancel</span>
+        </button>
+      </div>
+    </div>
+    <div class="dialog__top__content">
+      <div class="dialog__top__content__picture">
+        <img [src]="user.photoUser" alt="{{ user.nameUser }}" />
+      </div>
+      <div class="dialog__top__content__input">
+        <input type="text" [value]="user.nameUser" />
+        <input type="tel" [value]="user.phoneUser" />
+      </div>
+    </div>
+  </div>
+  <div class="dialog__bottom">
+    <div class="dialog__bottom__content">
+      <div class="dialog__bottom__content__btn">
+        <button mat-icon-button>
+          <mat-icon>camera_alt</mat-icon>
+        </button>
+      </div>
+      <div class="dialog__bottom__content__bio">
+        <span class="material-icons">
+          info
+        </span>
+        <input type="text" value="Bio" />
+      </div>
+    </div>
+    <button mat-raised-button color="primary">
+      Save Changes
+    </button>
+  </div>
+</div>
