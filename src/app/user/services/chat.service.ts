@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ChatList } from '../models/contact.model';
-import { ChatMessage } from '../models/chat-message.model';
+import { ChatList } from '../../models/contact.model';
+import { ChatMessage } from '../../models/chat-message.model';
 
 @Injectable({
   providedIn: 'root',
