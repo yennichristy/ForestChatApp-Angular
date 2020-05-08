@@ -5,6 +5,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
 
 const MaterialComponents = [
   MatFormFieldModule,
@@ -12,6 +14,8 @@ const MaterialComponents = [
   MatButtonModule,
   MatIconModule,
   MatAutocompleteModule,
+  MatMenuModule,
+  MatDialogModule,
 ];
 
 @NgModule({
