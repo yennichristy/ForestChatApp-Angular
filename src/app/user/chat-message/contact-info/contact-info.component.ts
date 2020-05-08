@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatList } from '../../../models/contact.model';
-import { ChatService } from '../../chat.service';
+import { ChatService } from '../../services/chat.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
