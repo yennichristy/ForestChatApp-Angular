@@ -16,6 +16,7 @@ import { ContactInfoComponent } from './user/chat-message/contact-info/contact-i
 import { MessageComponent } from './user/chat-message/message/message.component';
 import { InputMessageComponent } from './user/chat-message/input-message/input-message.component';
 import { ChatStartComponent } from './user/chat-start/chat-start.component';
+import { UserInfoComponent } from './user/user-info/user-info.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ChatStartComponent } from './user/chat-start/chat-start.component';
     MessageComponent,
     InputMessageComponent,
     ChatStartComponent,
+    UserInfoComponent,
   ],
   imports: [
     BrowserModule,
