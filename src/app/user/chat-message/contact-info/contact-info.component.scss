@@ -38,3 +38,44 @@
     }
   }
 }
+
+.message-container {
+  background: #73cbb117;
+  height: 600px;
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    &__send {
+      grid-column: 7/12;
+      background: #c3edb0;
+      box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1),
+        0 4px 4px 0 rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      padding: 5px 15px;
+      margin: 15px 15px 0;
+      display: flex;
+      &__text {
+        margin: 0 0;
+      }
+      &__time {
+        font-size: 10px;
+      }
+    }
+    &__receive {
+      display: flex;
+      grid-column: 1/6;
+      background: #ffffff;
+      box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1),
+        0 4px 4px 0 rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+      padding: 5px 15px;
+      margin: 15px 15px 0;
+      &__text {
+        margin: 0 0;
+      }
+      &__time {
+        font-size: 10px;
+      }
+    }
+  }
+}

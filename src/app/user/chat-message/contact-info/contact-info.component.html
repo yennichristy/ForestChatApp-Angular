@@ -17,3 +17,31 @@
     </mat-menu>
   </div>
 </div>
+<div class="message-container">
+  <div class="message-container__content">
+    <div class="message-container__content__send">
+      <p class="message-container__content__send__text">
+        {{ message.content }}
+      </p>
+      <span class="message-container__content__send__time">{{
+        message.dateMsg | date: "shortTime"
+      }}</span>
+    </div>
+    <div class="message-container__content__send">
+      <p class="message-container__content__send__text">
+        {{ message.content }}
+      </p>
+      <span class="message-container__content__send__time">{{
+        message.dateMsg | date: "shortTime"
+      }}</span>
+    </div>
+    <div class="message-container__content__receive">
+      <p class="message-container__content__receive__text">
+        {{ message.contentReceive }}
+      </p>
+      <span class="message-container__content__receive__time">{{
+        message.dateMsg | date: "shortTime"
+      }}</span>
+    </div>
+  </div>
+</div>
