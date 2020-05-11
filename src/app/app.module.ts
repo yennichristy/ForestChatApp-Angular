@@ -13,7 +13,6 @@ import { ChatDetailsComponent } from './user/chat-list/chat-details/chat-details
 import { UserNavComponent } from './user/user-nav/user-nav.component';
 import { ChatMessageComponent } from './user/chat-message/chat-message.component';
 import { ContactInfoComponent } from './user/chat-message/contact-info/contact-info.component';
-import { MessageComponent } from './user/chat-message/message/message.component';
 import { InputMessageComponent } from './user/chat-message/input-message/input-message.component';
 import { ChatStartComponent } from './user/chat-start/chat-start.component';
 import { UserInfoComponent } from './user/user-info/user-info.component';
@@ -28,7 +27,6 @@ import { UserInfoComponent } from './user/user-info/user-info.component';
     UserNavComponent,
     ChatMessageComponent,
     ContactInfoComponent,
-    MessageComponent,
     InputMessageComponent,
     ChatStartComponent,
     UserInfoComponent,
