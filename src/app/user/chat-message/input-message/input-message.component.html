@@ -1,9 +1,17 @@
 <div class="input-message">
-  <form class="input-message__form">
-    <input matInput type="text" placeholder="Enter your message here" />
+  <form class="input-message__form" #form="ngForm" (ngSubmit)="sendMsg(form)">
+    <input
+      matInput
+      type="text"
+      placeholder="Enter your message here"
+      autocomplete="off"
+      ngModel
+      name="message"
+      (keydown)="handleSendMsg($event)"
+    />
   </form>
   <div class="input-message__send">
-    <button mat-icon-button class="input-message__send__btn">
+    <button mat-icon-button class="input-message__send__btn" type="submit">
       <span class="material-icons">send</span>
     </button>
   </div>
